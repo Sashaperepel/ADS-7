@@ -1,15 +1,18 @@
+// Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+#include <string>
 
 template<typename T>
 class TPQueue {
-  private:
+   private:
   struct Item {
     T data;
     Item* next;
   };
   Item* head;
-  public:
+  
+   public:
   TPQueue() : head(nullptr) {}
   void push(const T& value) {
     if (head == nullptr) {
@@ -62,4 +65,4 @@ struct SYM {
   int prior;
 };
 
-#endif
+#endif // INCLUDE_TPQUEUE_H_
